@@ -37,7 +37,11 @@ async def give_filter(client, message):
         settings = await get_settings(message.chat.id)
         chatid = message.chat.id 
         user_id = message.from_user.id if message.from_user else 0
-        if settings['fsub'] != None:
+        fsub_setting = settings.get('fsub', None)
+
+if fsub_setting is not None:
+    # Your code here
+    pass
             try:
                 btn = await pub_is_subscribed(client, message, settings['fsub'])
                 if btn:
@@ -3514,6 +3518,7 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
 
 
 
