@@ -775,7 +775,7 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
     except:
         pass
     
-    _, key = query.data.split("#")
+_, key = query.data.split("#")
     search = FRESH.get(key)
     BUTTONS[key] = None
     try:
@@ -3514,6 +3514,7 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
 
 
 
