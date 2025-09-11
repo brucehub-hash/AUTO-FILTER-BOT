@@ -775,7 +775,7 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
     except:
         pass
     
-_, key = query.data.split("#")
+    _, key = query.data.split("#")
     search = FRESH.get(key)
     BUTTONS[key] = None
     try:
@@ -805,7 +805,7 @@ _, key = query.data.split("#")
     )
     req = query.from_user.id
     offset = 0
-    btn.append([InlineKeyboardButton(text="↭ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ↭", callback_data=f"next_{req}_{key}_{offset}")])
+    btn.append([InlineKeyboardButton(text="↭ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ​↭", callback_data=f"next_{req}_{key}_{offset}")])
 
     try:
         await query.edit_message_reply_markup(
@@ -3514,6 +3514,7 @@ async def global_filters(client, message, text=False):
                 break
     else:
         return False
+
 
 
 
