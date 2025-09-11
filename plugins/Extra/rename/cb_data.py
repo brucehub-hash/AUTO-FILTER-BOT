@@ -24,7 +24,7 @@ async def cancel(bot,update):
     except:
         return
 
-@Client.on_callback_query(filters.regex("upload"))
+@Client.on_callback_query(filters.regex("rename"))
 async def doc(bot, update):
     try:
         type = update.data.split("_")[1]
